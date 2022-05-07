@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const express = require("express").Router();
-const uuidv4 = require("uuid");
+const express = require("express");
+const { v4: uuidv4 } = require("uuid");
 var bodyParser = require("body-parser");
 // create application/json parser
 var jsonParser = bodyParser.json();
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.text({ type: "text/html" }));
 
 // GET Route for db.json file
-app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, "./db.json")));
+app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, "/db/db.json")));
 
 // POST Route for submitting note
 app.post("/api/notes", jsonParser, (req, res) => {
