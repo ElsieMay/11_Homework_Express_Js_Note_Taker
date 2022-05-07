@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const express = require("express").Router();
 const uuidv4 = require("uuid");
+const bodyParser = require("body-parser");
 
 const PORT = process.env.port || 3307;
 
@@ -12,6 +13,7 @@ const app = express();
 app.use(express.json());
 app.use("/api", api);
 app.use(express.static("public"));
+app.use(bodyParser.json());
 
 // GET Route for db.json file
 app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, "./db.json")));
@@ -19,7 +21,8 @@ app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, "./db.json
 // POST Route for submitting note
 app.post("/api/notes", (req, res) => {
 	console.log(req.body);
-	const note = req.body;
+	const note = req.body(uuidv4);
+	const newNote = note.toString();
 });
 
 // GET Route for notes.html
