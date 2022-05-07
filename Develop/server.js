@@ -35,6 +35,7 @@ app.post("/api/notes", (req, res) => {
 			note_id: uuidv4(),
 		};
 		let readNote = JSON.parse(fs.readFileSync("./db/db.json"));
+		readNote.push(newNote);
 		//writes file
 		fs.writeFileSync("./db/db.json", JSON.stringify(readNote));
 		//provides a response if successfully posted
