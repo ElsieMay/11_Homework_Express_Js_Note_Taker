@@ -50,6 +50,18 @@ app.post("/api/notes", (req, res) => {
 	}
 });
 
+// DELETE request
+app.delete("/api/notes", (req, res) => {
+	const id = readNote.some((notes) => note_id === req.params.notes);
+
+	if (!id) {
+		res.status(404).json("error in deleting note");
+	} else {
+		readNote.filter((notes) => note_id !== req.params.notes);
+		res.json(readNote);
+	}
+});
+
 // GET Route for notes.html
 app.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "./public/notes.html")));
 

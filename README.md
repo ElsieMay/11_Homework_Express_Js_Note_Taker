@@ -44,6 +44,10 @@ https://www.youtube.com/watch?v=1cjdlfB11Ss<br>
 https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/<br>
 https://stackoverflow.com/questions/6158933/how-is-an-http-post-request-made-in-node-js<br>
 https://www.geeksforgeeks.org/how-http-post-request-work-in-node-js/<br>
+https://www.tutorialspoint.com/express-js-app-delete-method<br>
+https://www.geeksforgeeks.org/express-js-app-delete-function/<br>
+https://www.tabnine.com/code/javascript/functions/express/Express/delete<br>
+https://stackoverflow.com/questions/61526572/express-js-delete-request<br>
 
 ## License
 
