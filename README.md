@@ -40,6 +40,10 @@ https://reqbin.com/code/javascript/wzp2hxwh/javascript-post-request-example<br>
 https://www.youtube.com/watch?v=rin7gb9kdpk<br>
 http://expressjs.com/en/resources/middleware/body-parser.html<br>
 https://www.npmjs.com/package/body-parser<br>
+https://www.youtube.com/watch?v=1cjdlfB11Ss<br>
+https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/<br>
+https://stackoverflow.com/questions/6158933/how-is-an-http-post-request-made-in-node-js<br>
+https://www.geeksforgeeks.org/how-http-post-request-work-in-node-js/<br>
 
 ## License
 

@@ -1,10 +1,9 @@
 const fs = require("fs");
+const util = require("util");
 const path = require("path");
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
-var bodyParser = require("body-parser");
-// create application/json parser
-var jsonParser = bodyParser.json();
+const db = require("./db/db.json");
 
 const PORT = process.env.port || 3307;
 
@@ -15,18 +14,36 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //static files
 app.use(express.static("public"));
-app.use(bodyParser.json());
-// parse an HTML body into a string
-app.use(bodyParser.text({ type: "text/html" }));
 
 // GET Route for db.json file
-app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, "/db/db.json")));
+app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, db)));
 
-// POST Route for submitting note
-app.post("/api/notes", jsonParser, (req, res) => {
-	console.log(req.body);
-	const note = req.body(uuidv4);
-	const newNote = note.toString();
+// POST Route for submitting new note
+app.post("/api/notes", (req, res) => {
+	//Destructuring for items in req.body
+	const { text, title } = req.body;
+	//validation for input
+	if (text && title) {
+		//Variable for the object saved in new note
+		const newNote = {
+			title,
+			text,
+			note_id: uuidv4(),
+		};
+		//adds in db.json file to new note created
+		readAndAppend(newNote, db);
+		//writes file
+		fs.writeFileSync(db, JSON.stringify(newNote));
+		//provides a response if successfully posted
+		const response = {
+			status: "success",
+			body: newNote,
+		};
+		res.status(201).json(response);
+		//provides error message if posting is unsuccessful
+	} else {
+		res.status(404).json("error in posting note");
+	}
 });
 
 // GET Route for notes.html
