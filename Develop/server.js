@@ -16,7 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // GET Route for db.json file
-app.get("/api/notes", (req, res) => res.sendFile(path.join(__dirname, db)));
+app.get("/api/notes", (req, res) => {
+	let notes = JSON.parse(fs.readFileSync("./db/db.json"));
+	res.json(notes);
+	console.log("GET NOTES!");
+});
 
 // POST Route for submitting new note
 app.post("/api/notes", (req, res) => {
@@ -30,10 +34,9 @@ app.post("/api/notes", (req, res) => {
 			text,
 			note_id: uuidv4(),
 		};
-		//adds in db.json file to new note created
-		readAndAppend(newNote, db);
+		let readNote = JSON.parse(fs.readFileSync("./db/db.json"));
 		//writes file
-		fs.writeFileSync(db, JSON.stringify(newNote));
+		fs.writeFileSync("./db/db.json", JSON.stringify(readNote));
 		//provides a response if successfully posted
 		const response = {
 			status: "success",
