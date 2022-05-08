@@ -32,7 +32,7 @@ app.post("/api/notes", (req, res) => {
 		const newNote = {
 			title,
 			text,
-			note_id: uuidv4(),
+			id: uuidv4(),
 		};
 		let readNote = JSON.parse(fs.readFileSync("./db/db.json"));
 		readNote.push(newNote);
@@ -54,7 +54,7 @@ app.post("/api/notes", (req, res) => {
 app.delete("/api/notes/:id", (req, res) => {
 	// For loop that removes unique note
 	for (var i = 0; i < db.length; i++) {
-		if (db[i].note_id == req.params.note_id) {
+		if (db[i].id == req.params.id) {
 			db.splice(i, 1);
 			break;
 		}
