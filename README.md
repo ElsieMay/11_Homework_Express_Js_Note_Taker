@@ -29,6 +29,8 @@ The Github repository can be viewed via this link, https://github.com/ElsieMay/1
 
 ![Screenshot](https://github.com/ElsieMay/11_Homework_Express_Js_Note_Taker/blob/main/images/Screen%20Shot%202022-05-08%20at%209.20.15%20pm.png)
 
+## Demo
+
 ## Credits
 
 I was aided by the BCS Learning assistant. They instructed me well.
@@ -54,6 +56,7 @@ https://stackoverflow.com/questions/17604866/difference-between-readfile-and-rea
 https://devcenter.heroku.com/articles/git<br>
 https://www.freecodecamp.org/news/how-to-deploy-an-application-to-heroku/<br>
 https://stackoverflow.com/questions/21013896/how-to-update-my-procfile-and-push-it-to-heroku-to-replace-the-current-one<br>
+https://stackoverflow.com/questions/9882284/looping-through-array-and-removing-items-without-breaking-for-loop<br>
 
 ## License
 

@@ -53,9 +53,9 @@ app.post("/api/notes", (req, res) => {
 // DELETE request for selected note
 app.delete("/api/notes/:id", (req, res) => {
 	// For loop that removes unique note
-	for (var j = 0; j < db.length; j++) {
-		if (db[j].id == req.params.note_id) {
-			db.splice(j, 1);
+	for (var i = 0; i < db.length; i++) {
+		if (db[i].note_id == req.params.note_id) {
+			db.splice(i, 1);
 			break;
 		}
 	}
