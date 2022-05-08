@@ -57,6 +57,7 @@ https://devcenter.heroku.com/articles/git<br>
 https://www.freecodecamp.org/news/how-to-deploy-an-application-to-heroku/<br>
 https://stackoverflow.com/questions/21013896/how-to-update-my-procfile-and-push-it-to-heroku-to-replace-the-current-one<br>
 https://stackoverflow.com/questions/9882284/looping-through-array-and-removing-items-without-breaking-for-loop<br>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter<br>
 
 ## License
 

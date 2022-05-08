@@ -3,7 +3,7 @@ const util = require("util");
 const path = require("path");
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
-const db = require("./db/db.json");
+let db = require("./db/db.json");
 
 const PORT = process.env.PORT || 3000;
 
@@ -38,6 +38,9 @@ app.post("/api/notes", (req, res) => {
 		readNote.push(newNote);
 		//writes file
 		fs.writeFileSync("./db/db.json", JSON.stringify(readNote));
+
+		db = readNote;
+
 		//provides a response if successfully posted
 		const response = {
 			status: "success",
@@ -52,13 +55,19 @@ app.post("/api/notes", (req, res) => {
 
 // DELETE request for selected note
 app.delete("/api/notes/:id", (req, res) => {
-	// For loop that removes unique note
-	for (var i = 0; i < db.length; i++) {
-		if (db[i].id == req.params.id) {
-			db.filter(i, 1);
-			break;
+	//filter sorts through id's and removes note selected
+	function filterByID(note) {
+		if (note.id === req.params.id) {
+			return false;
+		} else {
+			return true;
 		}
 	}
+
+	db = db.filter(filterByID);
+
+	console.log("Filtered Array\n", db);
+
 	// writes notes again without removed note
 	fs.writeFileSync("./db/db.json", JSON.stringify(db), (err) => {
 		if (err) throw err;
