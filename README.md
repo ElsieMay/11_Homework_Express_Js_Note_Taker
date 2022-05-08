@@ -15,17 +15,19 @@ I learnt about using node js, Express Js, and much more.
 
 ## Installation
 
-The project can be viewed via this link, https://github.com/ElsieMay/07_Homework_Professional_README_Generator. The steps one can take to install this application include: clone repo, run npm init, install dependancies and run node index.js, answering prompts when questioned. This will generate an index.html file, which will be located in the src folder.
+To install necessary dependencies, run the following command: `npm i express`
 
 ## Usage
 
-The Github repository can be viewed via this link, https://github.com/ElsieMay/07_Homework_Professional_README_Generator.
-
-Run node index.js and answer prompts to create a index.hmtl file.
+The Github repository can be viewed via this link, https://github.com/ElsieMay/11_Homework_Express_Js_Note_Taker. The deployed application can be viewed via this Heroku link, https://elsie-note-taker.herokuapp.com.
 
 ## App Screenshots
 
-![Screenshot](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Shot%202022-05-07%20at%209.00.13%20am.png)
+![Screenshot](https://github.com/ElsieMay/11_Homework_Express_Js_Note_Taker/blob/main/images/Screen%20Shot%202022-05-08%20at%209.19.50%20pm.png)
+
+![Screenshot](https://github.com/ElsieMay/11_Homework_Express_Js_Note_Taker/blob/main/images/Screen%20Shot%202022-05-08%20at%209.20.04%20pm.png)
+
+![Screenshot](https://github.com/ElsieMay/11_Homework_Express_Js_Note_Taker/blob/main/images/Screen%20Shot%202022-05-08%20at%209.20.15%20pm.png)
 
 ## Credits
 
