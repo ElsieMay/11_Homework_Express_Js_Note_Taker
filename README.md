@@ -48,6 +48,9 @@ https://www.tutorialspoint.com/express-js-app-delete-method<br>
 https://www.geeksforgeeks.org/express-js-app-delete-function/<br>
 https://www.tabnine.com/code/javascript/functions/express/Express/delete<br>
 https://stackoverflow.com/questions/61526572/express-js-delete-request<br>
+https://stackoverflow.com/questions/17604866/difference-between-readfile-and-readfilesync<br>
+https://devcenter.heroku.com/articles/git<br>
+https://www.freecodecamp.org/news/how-to-deploy-an-application-to-heroku/<br>
 
 ## License
 
