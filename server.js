@@ -63,9 +63,7 @@ app.delete("/api/notes/:id", (req, res) => {
 			return true;
 		}
 	}
-
 	db = db.filter(filterByID);
-
 	console.log("Filtered Array\n", db);
 
 	// writes notes again without removed note
